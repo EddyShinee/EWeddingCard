@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; } #lang-switch button[aria-pressed="true"]{background:#32573f;color:#fff;} #lang-switch button[aria-pressed="false"]{color:#32573f;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
   tailwind.config = {
     darkMode: "class",
     theme: {
@@ -111,24 +111,28 @@
 <span class=" text-base text-gold tracking-[0.12em] mt-1">10.10.2026</span>
 </span>
 </a>
-<nav aria-label="Điều hướng chính" class="hidden lg:flex items-center gap-x-7  text-[1.2rem] text-primary/80">
-<a class="hover:text-primary transition-colors whitespace-nowrap" href="#hero">Trang chủ</a>
-<a class="hover:text-primary transition-colors whitespace-nowrap" href="#about">Chúng mình</a>
-<a class="hover:text-primary transition-colors whitespace-nowrap" href="#timeline">Lịch cưới</a>
-<a class="hover:text-primary transition-colors whitespace-nowrap" href="#gallery">Hình ảnh</a>
-<a class="hover:text-primary transition-colors whitespace-nowrap" href="#family">Gia đình</a>
+<nav aria-label="Điều hướng chính" data-i18n-aria="nav.main" class="hidden lg:flex items-center gap-x-7  text-[1.2rem] text-primary/80">
+<a class="hover:text-primary transition-colors whitespace-nowrap" href="#hero" data-i18n="nav.home">Trang chủ</a>
+<a class="hover:text-primary transition-colors whitespace-nowrap" href="#about" data-i18n="nav.story">Chúng mình</a>
+<a class="hover:text-primary transition-colors whitespace-nowrap" href="#timeline" data-i18n="nav.schedule">Lịch cưới</a>
+<a class="hover:text-primary transition-colors whitespace-nowrap" href="#gallery" data-i18n="nav.gallery">Hình ảnh</a>
+<a class="hover:text-primary transition-colors whitespace-nowrap" href="#family" data-i18n="nav.family">Gia đình</a>
 </nav>
 <div class="flex items-center gap-2 shrink-0">
-<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Mở danh mục điều hướng" class="lg:hidden p-2 text-primary" id="menu-toggle" type="button"><svg class="menu-icon w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"></path></svg><svg class="close-icon hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"></path></svg></button>
+<div id="lang-switch" class="flex items-center overflow-hidden rounded-full border border-primary/25 text-sm font-label-sm" role="group" aria-label="Language">
+<button type="button" data-set-lang="vi" class="px-2.5 py-1" aria-pressed="true">VI</button>
+<button type="button" data-set-lang="en" class="px-2.5 py-1" aria-pressed="false">EN</button>
+</div>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Mở danh mục điều hướng" data-i18n-aria="menu.open" class="lg:hidden p-2 text-primary" id="menu-toggle" type="button"><svg class="menu-icon w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"></path></svg><svg class="close-icon hidden w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"></path></svg></button>
 </div>
 </div>
-<nav aria-label="Điều hướng điện thoại" class="hidden lg:hidden border-t border-primary/10 bg-surface" id="mobile-menu">
+<nav aria-label="Điều hướng điện thoại" data-i18n-aria="nav.mobile" class="hidden lg:hidden border-t border-primary/10 bg-surface" id="mobile-menu">
 <div class="max-w-7xl mx-auto px-gutter-sm py-3 flex flex-col  text-2xl text-primary">
-<a class="px-2 py-2.5 border-b border-primary/10" href="#hero">Trang chủ</a>
-<a class="px-2 py-2.5 border-b border-primary/10" href="#about">Chúng mình</a>
-<a class="px-2 py-2.5 border-b border-primary/10" href="#timeline">Lịch cưới</a>
-<a class="px-2 py-2.5 border-b border-primary/10" href="#gallery">Hình ảnh</a>
-<a class="px-2 py-2.5" href="#family">Gia đình</a>
+<a class="px-2 py-2.5 border-b border-primary/10" href="#hero" data-i18n="nav.home">Trang chủ</a>
+<a class="px-2 py-2.5 border-b border-primary/10" href="#about" data-i18n="nav.story">Chúng mình</a>
+<a class="px-2 py-2.5 border-b border-primary/10" href="#timeline" data-i18n="nav.schedule">Lịch cưới</a>
+<a class="px-2 py-2.5 border-b border-primary/10" href="#gallery" data-i18n="nav.gallery">Hình ảnh</a>
+<a class="px-2 py-2.5" href="#family" data-i18n="nav.family">Gia đình</a>
 </div>
 </nav>
 </header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full text-on-surface">
@@ -143,7 +147,7 @@
 <div class="flex flex-col items-center justify-center mb-space-md">
 <div class="flex items-center gap-3 mb-2 opacity-90">
 <svg class="w-12 h-6 text-tertiary-fixed" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 60 20"><path d="M2 15 C 10 5, 20 5, 25 12 C 30 2, 45 2, 50 12 C 55 12, 58 15, 58 18" stroke-linecap="round"></path></svg>
-<span class="font-label-sm text-sm uppercase tracking-[0.3em] text-tertiary-fixed font-semibold">Kính Báo Tân Hôn</span>
+<span class="font-label-sm text-sm uppercase tracking-[0.3em] text-tertiary-fixed font-semibold" data-i18n="hero.kicker">Kính Báo Lễ cưới</span>
 <svg class="w-12 h-6 text-tertiary-fixed transform scale-x-[-1]" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 60 20"><path d="M2 15 C 10 5, 20 5, 25 12 C 30 2, 45 2, 50 12 C 55 12, 58 15, 58 18" stroke-linecap="round"></path></svg>
 </div>
 <div class="w-24 h-24 p-2 bg-surface-bright/95 backdrop-blur-md rounded-full shadow-xl flex items-center justify-center border-2 border-gold/50">
@@ -153,7 +157,7 @@
 <!-- Overline Accents with traditional double line -->
 <div class="flex items-center justify-center gap-4 mb-space-sm text-tertiary-fixed">
 <span class="h-px w-10 sm:w-16 bg-gold opacity-80"></span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-tertiary-fixed font-semibold">Thánh Lễ Hôn Phối</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-tertiary-fixed font-semibold" data-i18n="hero.mass">Thánh Lễ Hôn Phối</span>
 <span class="h-px w-10 sm:w-16 bg-gold opacity-80"></span>
 </div>
 <!-- Main Headline Couple Names in Heritage Editorial Style -->
@@ -162,7 +166,7 @@
 </h1>
 <div class="flex items-center justify-center gap-3 my-2">
 <span class="h-px w-8 bg-gold/50"></span>
-<span class="font-label-sm text-sm uppercase tracking-[0.28em] text-tertiary-fixed/90 font-medium">Duyên Tình Trăm Năm</span>
+<span class="font-label-sm text-sm uppercase tracking-[0.28em] text-tertiary-fixed/90 font-medium" data-i18n="hero.love">Duyên Tình Trăm Năm</span>
 <span class="h-px w-8 bg-gold/50"></span>
 </div>
 <!-- Date Banner with Lunar Date Badge -->
@@ -170,28 +174,28 @@
 <div class="inline-flex items-center gap-space-md py-space-xs px-space-lg bg-surface-bright/15 backdrop-blur-md rounded-full border border-gold/40 shadow-inner">
 <span class=" text-headline-sm text-tertiary-fixed tracking-[0.25em]">10 • 10 • 2026</span>
 </div>
-<span class="font-label-sm text-sm sm:text-base text-tertiary-fixed/90 tracking-widest uppercase font-medium bg-black/30 px-4 py-1 rounded-full border border-gold/30">
+<span class="font-label-sm text-sm sm:text-base text-tertiary-fixed/90 tracking-widest uppercase font-medium bg-black/30 px-4 py-1 rounded-full border border-gold/30" data-i18n="hero.lunar">
     (Nhằm ngày 01 tháng 09 năm Bính Ngọ)
   </span>
 </div>
 <!-- Scripture Quote -->
 <div class="max-w-2xl mx-auto mb-space-sm px-4 py-2.5 bg-black/20 backdrop-blur-sm rounded-lg border border-gold/30">
-<p class=" italic text-tertiary-fixed text-base sm:text-lg mb-1">
+<p class=" italic text-tertiary-fixed text-base sm:text-lg mb-1" data-i18n="hero.verse">
     “Sự gì Thiên Chúa đã kết hợp, loài người không được phân ly.”
   </p>
-<p class="font-label-sm text-sm text-surface-container-low uppercase tracking-widest font-medium">Mát-thêu 19, 6</p>
+<p class="font-label-sm text-sm text-surface-container-low uppercase tracking-widest font-medium" data-i18n="hero.ref">Mát-thêu 19, 6</p>
 </div>
 
 <!-- CTA Buttons -->
 <div class="flex flex-col sm:flex-row items-center justify-center gap-space-sm">
 <a class="inline-flex items-center justify-center gap-2 font-label-sm text-label-sm uppercase tracking-[0.18em] bg-primary text-on-primary px-space-xl py-4 rounded-lg hover:bg-primary-container transition-all shadow-xl hover:-translate-y-0.5 border border-primary-fixed-dim/30 font-semibold" href="#timeline">
-<span>Xem chương trình lễ cưới</span>
+<span data-i18n="hero.cta">Xem chương trình lễ cưới</span>
 <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
 </a>
 </div>
 <!-- Scroll indicator -->
 <div class="mt-space-xl flex flex-col items-center justify-center text-surface-container-low/80 animate-bounce">
-<span class="font-label-sm text-sm uppercase tracking-[0.25em] mb-1">Cuộn để xem tiếp</span>
+<span class="font-label-sm text-sm uppercase tracking-[0.25em] mb-1" data-i18n="hero.scroll">Cuộn để xem tiếp</span>
 <span class="material-symbols-outlined text-[20px]">keyboard_arrow_down</span>
 </div></div>
 </section>
@@ -199,10 +203,10 @@
 <section class="w-full py-space-xl px-gutter-sm lg:px-gutter max-w-6xl mx-auto" id="about">
 <div class="text-center max-w-2xl mx-auto mb-space-xl"><div class="flex items-center justify-center gap-2 mb-1">
 <span class="material-symbols-outlined text-gold text-[20px]">spa</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.28em] text-secondary font-semibold">Cô Dâu &amp; Chú Rể</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.28em] text-secondary font-semibold" data-i18n="about.kicker">Cô Dâu &amp; Chú Rể</span>
 <span class="material-symbols-outlined text-gold text-[20px]">spa</span>
 </div>
-<h2 class=" text-headline-lg text-primary mt-space-xs italic">Hai chúng mình</h2>
+<h2 class=" text-headline-lg text-primary mt-space-xs italic" data-i18n="about.title">Hai chúng mình</h2>
 <div class="flex items-center justify-center gap-2 mt-space-xs opacity-75">
 <span class="h-px w-10 bg-gold"></span>
 <span class="w-1.5 h-1.5 rotate-45 bg-gold"></span>
@@ -214,13 +218,13 @@
 <!-- Groom Card (5 cols) -->
 <div class="lg:col-span-5 bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md text-center group border border-outline-variant/40">
 <div class="relative overflow-hidden rounded-lg aspect-[3/4] mb-space-md shadow-sm">
-<img alt="Vũ Đức Thuận - Chú Rể" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700 ease-out" src="img/ChuRe.jpg"/>
+<img alt="Vũ Đức Thuận - Chú Rể" data-i18n-alt="alt.groom" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700 ease-out" src="img/ChuRe.jpg"/>
 <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/85 to-transparent p-space-sm text-surface-bright">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-tertiary-fixed font-semibold">Chú Rể</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-tertiary-fixed font-semibold" data-i18n="about.groom">Chú Rể</span>
 </div>
 </div>
 <h3 class=" text-headline-sm text-primary mb-1">Vũ Đức Thuận</h3>
-<p class="font-label-sm text-label-sm text-gold uppercase tracking-[0.2em] mb-space-xs font-semibold">Chú Rể</p>
+<p class="font-label-sm text-label-sm text-gold uppercase tracking-[0.2em] mb-space-xs font-semibold" data-i18n="about.groom">Chú Rể</p>
 </div>
 <!-- Connector Medallion (2 cols) -->
 <div class="lg:col-span-2 flex flex-col items-center justify-center py-space-sm">
@@ -228,19 +232,19 @@
 <span class="material-symbols-outlined text-[30px] text-primary" style="font-variation-settings: 'FILL' 1;">church</span>
 </div>
 <div class="hidden lg:block w-px h-24 bg-gold/40 my-2"></div>
-<span class=" text-body-lg text-secondary italic text-center px-2"><span class="font-label-sm text-sm tracking-widest text-on-surface-variant uppercase not-italic font-semibold">Vẹn Tròn Yêu Thương</span></span>
+<span class=" text-body-lg text-secondary italic text-center px-2"><span class="font-label-sm text-sm tracking-widest text-on-surface-variant uppercase not-italic font-semibold" data-i18n="about.love">Vẹn Tròn Yêu Thương</span></span>
 <div class="hidden lg:block w-px h-24 bg-gold/40 my-2"></div>
 </div>
 <!-- Bride Card (5 cols) -->
 <div class="lg:col-span-5 bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md text-center group border border-outline-variant/40">
 <div class="relative overflow-hidden rounded-lg aspect-[3/4] mb-space-md shadow-sm">
-<img alt="Trương Thị Kim Thư - Cô Dâu" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700 ease-out" src="img/CoDau.jpg"/>
+<img alt="Trương Thị Kim Thư - Cô Dâu" data-i18n-alt="alt.bride" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700 ease-out" src="img/CoDau.jpg"/>
 <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/85 to-transparent p-space-sm text-surface-bright">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-tertiary-fixed font-semibold">Cô Dâu</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-tertiary-fixed font-semibold" data-i18n="about.bride">Cô Dâu</span>
 </div>
 </div>
 <h3 class=" text-headline-sm text-primary mb-1">Trương Thị Kim Thư</h3>
-<p class="font-label-sm text-label-sm text-gold uppercase tracking-[0.2em] mb-space-xs font-semibold">Cô Dâu</p>
+<p class="font-label-sm text-label-sm text-gold uppercase tracking-[0.2em] mb-space-xs font-semibold" data-i18n="about.bride">Cô Dâu</p>
 </div>
 </div>
 
@@ -249,11 +253,11 @@
 <div class="max-w-4xl mx-auto">
 <div class="text-center max-w-2xl mx-auto mb-space-xl"><div class="flex items-center justify-center gap-2 mb-1">
 <span class="material-symbols-outlined text-gold text-[20px]">calendar_today</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] sm:tracking-[0.28em] text-secondary font-semibold">Chương Trình Ngày Hồng Phúc</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] sm:tracking-[0.28em] text-secondary font-semibold" data-i18n="time.kicker">Chương Trình Ngày Hồng Phúc</span>
 <span class="material-symbols-outlined text-gold text-[20px]">calendar_today</span>
 </div>
-<h2 class=" text-headline-lg text-primary mt-space-xs italic">Ngày vui của chúng mình</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-1 font-light">Trân trọng kính mời quý khách lưu lại các mốc thời gian trang trọng</p>
+<h2 class=" text-headline-lg text-primary mt-space-xs italic" data-i18n="time.title">Ngày vui của chúng mình</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 font-light" data-i18n="time.lead">Trân trọng kính mời quý khách lưu lại các mốc thời gian trang trọng</p>
 <div class="flex items-center justify-center gap-2 mt-space-xs opacity-75">
 <span class="h-px w-10 bg-gold"></span>
 <span class="w-1.5 h-1.5 rotate-45 bg-gold"></span>
@@ -271,13 +275,13 @@
 <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-3">
 <p class=" text-4xl text-primary leading-none">17:00</p>
 <div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full">Thứ Sáu, 09.10.2026</span>
-<span class="font-label-sm text-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full">30.08 Bính Ngọ</span>
+<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full" data-i18n="time.fri">Thứ Sáu, 09.10.2026</span>
+<span class="font-label-sm text-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full" data-i18n="time.lunar30">30.08 Bính Ngọ</span>
 </div>
 </div>
-<h3 class=" text-2xl sm:text-3xl text-primary leading-tight">Nhóm họ nhà gái</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">Tư gia nhà gái — Số 11, ấp Phụng Lợi, xã Thạnh An, TP. Cần Thơ</p>
-<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm text-primary border border-primary/25 bg-secondary-container/40 hover:bg-secondary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/C2KFa2wmTJwYqdPJ6"><span class="material-symbols-outlined text-[18px]">location_on</span>Chỉ đường</a>
+<h3 class=" text-2xl sm:text-3xl text-primary leading-tight" data-i18n="time.e1">Nhóm họ nhà gái</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2" data-i18n="time.placeBride">Tư gia nhà gái — Số 11, ấp Phụng Lợi, xã Thạnh An, TP. Cần Thơ</p>
+<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm text-primary border border-primary/25 bg-secondary-container/40 hover:bg-secondary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/C2KFa2wmTJwYqdPJ6"><span class="material-symbols-outlined text-[18px]">location_on</span><span data-i18n="directions">Chỉ đường</span></a>
 </div>
 </article>
 <article class="relative grid grid-cols-[3.5rem_1fr] sm:grid-cols-[4rem_1fr] gap-3 sm:gap-5">
@@ -290,14 +294,14 @@
 <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-3">
 <p class=" text-4xl text-primary leading-none">09:00</p>
 <div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full">Thứ Bảy, 10.10.2026</span>
-<span class="font-label-sm text-sm bg-surface text-primary px-3 py-1 rounded-full">01.09 Bính Ngọ</span>
+<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full" data-i18n="time.sat">Thứ Bảy, 10.10.2026</span>
+<span class="font-label-sm text-sm bg-surface text-primary px-3 py-1 rounded-full" data-i18n="time.lunar01">01.09 Bính Ngọ</span>
 </div>
 </div>
-<p class="font-label-sm text-sm uppercase tracking-[0.16em] text-gold font-semibold mb-1">Nghi thức chính</p>
-<h3 class=" text-2xl sm:text-3xl text-primary leading-tight">Thánh lễ hôn phối</h3>
-<p class="font-body-md text-body-md text-on-surface mt-2">Thánh Đường Giáo Xứ Giuse An Bình</p>
-<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm bg-primary text-on-primary hover:bg-primary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/QiAs3RDnzSSciEQt8"><span class="material-symbols-outlined text-[18px]">church</span>Chỉ đường</a>
+<p class="font-label-sm text-sm uppercase tracking-[0.16em] text-gold font-semibold mb-1" data-i18n="time.main">Nghi thức chính</p>
+<h3 class=" text-2xl sm:text-3xl text-primary leading-tight" data-i18n="time.e2">Thánh lễ hôn phối</h3>
+<p class="font-body-md text-body-md text-on-surface mt-2" data-i18n="time.church">Thánh Đường Giáo Xứ Giuse An Bình</p>
+<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm bg-primary text-on-primary hover:bg-primary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/QiAs3RDnzSSciEQt8"><span class="material-symbols-outlined text-[18px]">church</span><span data-i18n="directions">Chỉ đường</span></a>
 </div>
 </article>
 <article class="relative grid grid-cols-[3.5rem_1fr] sm:grid-cols-[4rem_1fr] gap-3 sm:gap-5">
@@ -310,13 +314,13 @@
 <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-3">
 <p class=" text-4xl text-primary leading-none">11:00</p>
 <div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full">Thứ Bảy, 10.10.2026</span>
-<span class="font-label-sm text-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full">01.09 Bính Ngọ</span>
+<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full" data-i18n="time.sat">Thứ Bảy, 10.10.2026</span>
+<span class="font-label-sm text-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full" data-i18n="time.lunar01">01.09 Bính Ngọ</span>
 </div>
 </div>
-<h3 class=" text-2xl sm:text-3xl text-primary leading-tight">Tiệc cưới nhà gái</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">Tư gia nhà gái — Số 11, ấp Phụng Lợi, xã Thạnh An, TP. Cần Thơ</p>
-<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm text-primary border border-primary/25 bg-secondary-container/40 hover:bg-secondary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/C2KFa2wmTJwYqdPJ6"><span class="material-symbols-outlined text-[18px]">location_on</span>Chỉ đường</a>
+<h3 class=" text-2xl sm:text-3xl text-primary leading-tight" data-i18n="time.e3">Tiệc cưới nhà gái</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2" data-i18n="time.placeBride">Tư gia nhà gái — Số 11, ấp Phụng Lợi, xã Thạnh An, TP. Cần Thơ</p>
+<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm text-primary border border-primary/25 bg-secondary-container/40 hover:bg-secondary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/C2KFa2wmTJwYqdPJ6"><span class="material-symbols-outlined text-[18px]">location_on</span><span data-i18n="directions">Chỉ đường</span></a>
 </div>
 </article>
 <article class="relative grid grid-cols-[3.5rem_1fr] sm:grid-cols-[4rem_1fr] gap-3 sm:gap-5">
@@ -329,13 +333,13 @@
 <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-3">
 <p class=" text-4xl text-primary leading-none">17:00</p>
 <div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full">Thứ Bảy, 10.10.2026</span>
-<span class="font-label-sm text-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full">01.09 Bính Ngọ</span>
+<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full" data-i18n="time.sat">Thứ Bảy, 10.10.2026</span>
+<span class="font-label-sm text-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full" data-i18n="time.lunar01">01.09 Bính Ngọ</span>
 </div>
 </div>
-<h3 class=" text-2xl sm:text-3xl text-primary leading-tight">Lễ nhóm họ nhà trai</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">Tư gia nhà trai — 53, ấp Phụng Quới A, xã Thạnh An, TP. Cần Thơ</p>
-<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm text-primary border border-primary/25 bg-secondary-container/40 hover:bg-secondary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/7XsqA5XDNt7hoSBw7"><span class="material-symbols-outlined text-[18px]">location_on</span>Chỉ đường</a>
+<h3 class=" text-2xl sm:text-3xl text-primary leading-tight" data-i18n="time.e4">Lễ nhóm họ nhà trai</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2" data-i18n="time.placeGroom">Tư gia nhà trai — 53, ấp Phụng Quới A, xã Thạnh An, TP. Cần Thơ</p>
+<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm text-primary border border-primary/25 bg-secondary-container/40 hover:bg-secondary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/7XsqA5XDNt7hoSBw7"><span class="material-symbols-outlined text-[18px]">location_on</span><span data-i18n="directions">Chỉ đường</span></a>
 </div>
 </article>
 <article class="relative grid grid-cols-[3.5rem_1fr] sm:grid-cols-[4rem_1fr] gap-3 sm:gap-5">
@@ -348,13 +352,13 @@
 <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-3">
 <p class=" text-4xl text-primary leading-none">11:00</p>
 <div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full">Chủ Nhật, 11.10.2026</span>
-<span class="font-label-sm text-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full">02.09 Bính Ngọ</span>
+<span class="font-label-sm text-sm bg-primary text-on-primary px-3 py-1 rounded-full" data-i18n="time.sun">Chủ Nhật, 11.10.2026</span>
+<span class="font-label-sm text-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full" data-i18n="time.lunar02">02.09 Bính Ngọ</span>
 </div>
 </div>
-<h3 class=" text-2xl sm:text-3xl text-primary leading-tight">Tiệc cưới nhà trai</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">Tư gia nhà trai — 53, ấp Phụng Quới A, xã Thạnh An, TP. Cần Thơ</p>
-<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm text-primary border border-primary/25 bg-secondary-container/40 hover:bg-secondary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/7XsqA5XDNt7hoSBw7"><span class="material-symbols-outlined text-[18px]">location_on</span>Chỉ đường</a>
+<h3 class=" text-2xl sm:text-3xl text-primary leading-tight" data-i18n="time.e5">Tiệc cưới nhà trai</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2" data-i18n="time.placeGroom">Tư gia nhà trai — 53, ấp Phụng Quới A, xã Thạnh An, TP. Cần Thơ</p>
+<a class="map-link mt-4 inline-flex items-center gap-1.5 font-label-sm text-sm text-primary border border-primary/25 bg-secondary-container/40 hover:bg-secondary-container px-4 py-2 rounded-lg" href="https://maps.app.goo.gl/7XsqA5XDNt7hoSBw7"><span class="material-symbols-outlined text-[18px]">location_on</span><span data-i18n="directions">Chỉ đường</span></a>
 </div>
 </article>
 </div>
@@ -366,39 +370,39 @@
 <!-- Decorative floral laurel icons -->
 <div class="flex justify-center items-center gap-3 text-secondary mb-space-xs">
 <span class="material-symbols-outlined text-[24px] text-gold">local_florist</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] font-semibold text-secondary">Thời Gian Hồng Phúc</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] font-semibold text-secondary" data-i18n="count.kicker">Thời Gian Hồng Phúc</span>
 <span class="material-symbols-outlined text-[24px] text-gold">local_florist</span>
 </div>
-<h2 class="font-headline-md sm:text-headline-lg text-primary mb-1">
+<h2 class="font-headline-md sm:text-headline-lg text-primary mb-1" data-i18n="count.title">
         Đếm ngược đến ngày chúng mình về chung một nhà
       </h2>
-<p class="font-label-sm text-secondary uppercase tracking-widest text-sm mb-space-lg font-semibold">
+<p class="font-label-sm text-secondary uppercase tracking-widest text-sm mb-space-lg font-semibold" data-i18n="count.date">
         10 • 10 • 2026 (Nhằm ngày 01/09 Năm Bính Ngọ)
       </p>
 <!-- Countdown Numbers Box (100% Vietnamese) -->
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm sm:gap-space-md max-w-2xl mx-auto mb-space-lg">
 <div class="bg-surface p-space-md rounded-lg shadow-sm border border-outline-variant/30">
 <span class=" text-headline-lg text-primary block" id="countdown-days">186</span>
-<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold">Ngày</span>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold" data-i18n="count.days">Ngày</span>
 </div>
 <div class="bg-surface p-space-md rounded-lg shadow-sm border border-outline-variant/30">
 <span class=" text-headline-lg text-primary block" id="countdown-hours">14</span>
-<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold">Giờ</span>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold" data-i18n="count.hours">Giờ</span>
 </div>
 <div class="bg-surface p-space-md rounded-lg shadow-sm border border-outline-variant/30">
 <span class=" text-headline-lg text-primary block" id="countdown-minutes">32</span>
-<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold">Phút</span>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold" data-i18n="count.mins">Phút</span>
 </div>
 <div class="bg-surface p-space-md rounded-lg shadow-sm border border-outline-variant/30">
 <span class=" text-headline-lg text-primary block" id="countdown-seconds">45</span>
-<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold">Giây</span>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-semibold" data-i18n="count.secs">Giây</span>
 </div>
 </div>
 <!-- Add to calendar CTA -->
 <div class="flex justify-center">
-<a class="inline-flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-wider bg-surface text-primary px-space-lg py-3 rounded-lg shadow-sm hover:bg-secondary-container/40 transition-colors border border-primary/20 font-semibold" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=L%E1%BB%85+Th%C3%A0nh+H%C3%B4n+Thu%E1%BA%ADn+%26+Th%C6%B0&amp;dates=20261010T020000Z/20261010T150000Z&amp;details=L%E1%BB%85+H%C3%B4n+Ph%E1%BB%91i+v%C3%A0+Ti%E1%BB%87c+C%C6%B0%E1%BB%9Bi+V%C5%A9+%C4%90%E1%BB%A9c+Thu%E1%BA%ADn+%26+Tr%C6%B0%C6%A1ng+Th%E1%BB%8B+Kim+Th%C6%B0" rel="noopener noreferrer" target="_blank">
+<a class="inline-flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-wider bg-surface text-primary px-space-lg py-3 rounded-lg shadow-sm hover:bg-secondary-container/40 transition-colors border border-primary/20 font-semibold" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=L%E1%BB%85+Th%C3%A0nh+H%C3%B4n+Thu%E1%BA%ADn+%26+Th%C6%B0&amp;dates=20261010T020000Z/20261010T150000Z&amp;details=L%E1%BB%85+H%C3%B4n+Ph%E1%BB%91i+v%C3%A0+Ti%E1%BB%87c+C%C6%B0%E1%BB%9Bi+V%C5%A9+%C4%90%E1%BB%A9c+Thu%E1%BA%ADn+%26+Tr%C6%B0%C6%A1ng+Th%E1%BB%8B+Kim+Th%C6%B0" id="add-calendar" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px] text-gold">calendar_add_on</span>
-<span>Lưu vào lịch hẹn</span>
+<span data-i18n="count.save">Lưu vào lịch hẹn</span>
 </a>
 </div>
 </div>
@@ -406,51 +410,51 @@
 <!-- 5. WEDDING PHOTO GALLERY -->
 <section class="w-full py-space-xl px-gutter-sm lg:px-gutter max-w-7xl mx-auto" id="gallery">
 <div class="text-center max-w-2xl mx-auto mb-space-xl">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.28em] text-secondary font-semibold">Khoảnh Khắc Yêu Thương</span>
-<h2 class=" text-headline-lg text-primary mt-space-xs italic">Kỷ niệm ngày chung đôi</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-1">Ghi dấu những xúc cảm ngọt ngào trên con đường cùng bước</p>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.28em] text-secondary font-semibold" data-i18n="gal.kicker">Khoảnh Khắc Yêu Thương</span>
+<h2 class=" text-headline-lg text-primary mt-space-xs italic" data-i18n="gal.title">Kỷ niệm ngày chung đôi</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" data-i18n="gal.lead">Ghi dấu những xúc cảm ngọt ngào trên con đường cùng bước</p>
 <div class="w-16 h-0.5 bg-gold mx-auto mt-space-xs opacity-75"></div>
 </div>
 <!-- Editorial Mosaic Grid -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 <!-- Slot 1: Wide couple highlight -->
 <div class="sm:col-span-2 group relative overflow-hidden rounded-xl aspect-[16/10] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận và Thư trước nhà thờ" class="w-full h-full object-cover object-[center_68%] group-hover:scale-105 transition-transform duration-700 ease-out" src="img/DAN09955.jpg"/>
+<img alt="Thuận và Thư trước nhà thờ" data-i18n-alt="alt.church" class="w-full h-full object-cover object-[center_68%] group-hover:scale-105 transition-transform duration-700 ease-out" src="img/DAN09955.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-space-md flex flex-col justify-end text-surface-bright">
-<span class=" text-body-lg">Hạnh phúc là khi bên nhau</span>
-<span class="font-label-sm text-sm tracking-widest uppercase text-tertiary-fixed font-semibold">Hình kỷ niệm lễ cưới</span>
+<span class=" text-body-lg" data-i18n="gal.cap1">Hạnh phúc là khi bên nhau</span>
+<span class="font-label-sm text-sm tracking-widest uppercase text-tertiary-fixed font-semibold" data-i18n="gal.cap1s">Hình kỷ niệm lễ cưới</span>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận và Thư cười bên nhau" class="w-full h-full object-cover object-[center_16%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01192.jpg"/>
+<img alt="Thuận và Thư cười bên nhau" data-i18n-alt="alt.smile" class="w-full h-full object-cover object-[center_16%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01192.jpg"/>
 </div>
 <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận và Thư trong áo dài" class="w-full h-full object-cover object-[center_14%] group-hover:scale-105 transition-transform duration-700" src="img/DAN00876.jpg"/>
+<img alt="Thuận và Thư trong áo dài" data-i18n-alt="alt.aodai" class="w-full h-full object-cover object-[center_14%] group-hover:scale-105 transition-transform duration-700" src="img/DAN00876.jpg"/>
 </div>
 <div class="sm:col-span-2 group relative overflow-hidden rounded-xl aspect-[16/10] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận và Thư cùng bó hoa" class="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01370.jpg"/>
+<img alt="Thuận và Thư cùng bó hoa" data-i18n-alt="alt.bouquet" class="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01370.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-space-md flex flex-col justify-end text-surface-bright">
-<span class=" text-body-lg">Bên nhau thật vui</span>
-<span class="font-label-sm text-sm tracking-widest uppercase text-tertiary-fixed font-semibold">Kỷ niệm ngày chung đôi</span>
+<span class=" text-body-lg" data-i18n="gal.cap2">Bên nhau thật vui</span>
+<span class="font-label-sm text-sm tracking-widest uppercase text-tertiary-fixed font-semibold" data-i18n="gal.cap2s">Kỷ niệm ngày chung đôi</span>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận và Thư giữa hoa" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01084.jpg"/>
+<img alt="Thuận và Thư giữa hoa" data-i18n-alt="alt.flowers" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01084.jpg"/>
 </div>
 <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận và Thư quay lưng" class="w-full h-full object-cover object-[center_16%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01276.jpg"/>
+<img alt="Thuận và Thư quay lưng" data-i18n-alt="alt.back" class="w-full h-full object-cover object-[center_16%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01276.jpg"/>
 </div>
 <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận nâng khăn voan của Thư" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01296.jpg"/>
+<img alt="Thuận nâng khăn voan của Thư" data-i18n-alt="alt.veil" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01296.jpg"/>
 </div>
 <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận và Thư đứng cạnh nhau" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01337.jpg"/>
+<img alt="Thuận và Thư đứng cạnh nhau" data-i18n-alt="alt.stand" class="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700" src="img/DAN01337.jpg"/>
 </div>
 <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận nhìn Thư" class="w-full h-full object-cover object-[center_14%] group-hover:scale-105 transition-transform duration-700" src="img/DAN00975.jpg"/>
+<img alt="Thuận nhìn Thư" data-i18n-alt="alt.look" class="w-full h-full object-cover object-[center_14%] group-hover:scale-105 transition-transform duration-700" src="img/DAN00975.jpg"/>
 </div>
 <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-surface-container shadow-sm border border-outline-variant/30">
-<img alt="Thuận và Thư bên chữ Hỷ" class="w-full h-full object-cover object-[center_16%] group-hover:scale-105 transition-transform duration-700" src="img/DAN00947.jpg"/>
+<img alt="Thuận và Thư bên chữ Hỷ" data-i18n-alt="alt.hy" class="w-full h-full object-cover object-[center_16%] group-hover:scale-105 transition-transform duration-700" src="img/DAN00947.jpg"/>
 </div>
 </div>
 </section>
@@ -459,10 +463,10 @@
 <div class="max-w-5xl mx-auto"><div class="text-center max-w-2xl mx-auto mb-space-xl">
 <div class="flex items-center justify-center gap-2 mb-1">
 <span class="material-symbols-outlined text-gold text-[20px]">local_florist</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.28em] text-secondary font-semibold">Gia Đình Hai Bên</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.28em] text-secondary font-semibold" data-i18n="fam.kicker">Gia Đình Hai Bên</span>
 <span class="material-symbols-outlined text-gold text-[20px]">local_florist</span>
 </div>
-<h2 class=" text-headline-lg text-primary mt-space-xs italic">Song Thân Chủ Hôn</h2>
+<h2 class=" text-headline-lg text-primary mt-space-xs italic" data-i18n="fam.title">Song Thân Chủ Hôn</h2>
 <div class="flex items-center justify-center gap-2 mt-space-xs opacity-75">
 <span class="h-px w-12 bg-gold"></span>
 <span class="w-2 h-2 rotate-45 bg-gold"></span>
@@ -479,17 +483,17 @@
 <div class="w-12 h-12 mx-auto rounded-full bg-secondary-container/40 flex items-center justify-center text-primary mb-space-sm border border-gold/30">
 <span class="material-symbols-outlined text-[22px] text-primary">diversity_1</span>
 </div>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-gold font-semibold">Bên Nhà Gái</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-gold font-semibold" data-i18n="fam.brideSide">Bên Nhà Gái</span>
 <div class="my-space-md py-space-sm px-space-sm border-y border-gold/30 bg-surface-container-low/50 rounded-lg">
-<p class="font-label-sm text-sm text-secondary uppercase tracking-wider mb-2 font-semibold">Song Thân Chủ Hôn</p>
-<p class=" text-body-lg text-on-surface font-semibold">Thân phụ: Phêrô Trương Minh Dễ</p>
-<p class=" text-body-lg text-on-surface font-semibold mt-1">Thân mẫu: Maria Lê Thị Kim Phụng</p>
+<p class="font-label-sm text-sm text-secondary uppercase tracking-wider mb-2 font-semibold" data-i18n="fam.parents">Song Thân Chủ Hôn</p>
+<p class=" text-body-lg text-on-surface font-semibold"><span data-i18n="fam.father">Thân phụ</span>: Phêrô Trương Minh Dễ</p>
+<p class=" text-body-lg text-on-surface font-semibold mt-1"><span data-i18n="fam.mother">Thân mẫu</span>: Maria Lê Thị Kim Phụng</p>
 <div class="mt-2.5 pt-2 border-t border-outline-variant/30 text-left sm:text-center">
-<p class="font-label-sm text-sm text-secondary uppercase tracking-wider font-semibold">Tư gia Nhà Gái</p>
-<a class="map-link inline-block font-body-sm text-body-sm text-primary font-medium mt-0.5 underline decoration-gold/60 underline-offset-2" href="https://maps.app.goo.gl/C2KFa2wmTJwYqdPJ6">Số 11 - Ấp Phụng Lợi - Xã Thạnh An - TP. Cần Thơ</a>
+<p class="font-label-sm text-sm text-secondary uppercase tracking-wider font-semibold" data-i18n="fam.homeBride">Tư gia Nhà Gái</p>
+<a class="map-link inline-block font-body-sm text-body-sm text-primary font-medium mt-0.5 underline decoration-gold/60 underline-offset-2" href="https://maps.app.goo.gl/C2KFa2wmTJwYqdPJ6" data-i18n="fam.addrBride">Số 11 - Ấp Phụng Lợi - Xã Thạnh An - TP. Cần Thơ</a>
 </div>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant font-light italic leading-relaxed">
+<p class="font-body-md text-body-md text-on-surface-variant font-light italic leading-relaxed" data-i18n="fam.quoteBride">
       “Kính mong quý quan viên hai họ, thân bằng quyến thuộc cùng đến hiệp thông dâng Thánh lễ và chung vui cùng gia đình chúng tôi trong ngày hồng phúc này.”
     </p>
 </div>
@@ -498,17 +502,17 @@
 <div class="w-12 h-12 mx-auto rounded-full bg-secondary-container/40 flex items-center justify-center text-primary mb-space-sm border border-gold/30">
 <span class="material-symbols-outlined text-[22px] text-primary">diversity_3</span>
 </div>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-gold font-semibold">Bên Nhà Trai</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-gold font-semibold" data-i18n="fam.groomSide">Bên Nhà Trai</span>
 <div class="my-space-md py-space-sm px-space-sm border-y border-gold/30 bg-surface-container-low/50 rounded-lg">
-<p class="font-label-sm text-sm text-secondary uppercase tracking-wider mb-2 font-semibold">Song Thân Chủ Hôn</p>
-<p class=" text-body-lg text-on-surface font-semibold">Thân phụ: Phaolô Vũ Quốc Hoà</p>
-<p class=" text-body-lg text-on-surface font-semibold mt-1">Thân mẫu: Maria Đỗ Thị Kim Loan</p>
+<p class="font-label-sm text-sm text-secondary uppercase tracking-wider mb-2 font-semibold" data-i18n="fam.parents">Song Thân Chủ Hôn</p>
+<p class=" text-body-lg text-on-surface font-semibold"><span data-i18n="fam.father">Thân phụ</span>: Phaolô Vũ Quốc Hoà</p>
+<p class=" text-body-lg text-on-surface font-semibold mt-1"><span data-i18n="fam.mother">Thân mẫu</span>: Maria Đỗ Thị Kim Loan</p>
 <div class="mt-2.5 pt-2 border-t border-outline-variant/30 text-left sm:text-center">
-<p class="font-label-sm text-sm text-secondary uppercase tracking-wider font-semibold">Tư gia Nhà Trai</p>
-<a class="map-link inline-block font-body-sm text-body-sm text-primary font-medium mt-0.5 underline decoration-gold/60 underline-offset-2" href="https://maps.app.goo.gl/7XsqA5XDNt7hoSBw7">53 - Ấp Phụng Quới A - Xã Thạnh An - TP. Cần Thơ</a>
+<p class="font-label-sm text-sm text-secondary uppercase tracking-wider font-semibold" data-i18n="fam.homeGroom">Tư gia Nhà Trai</p>
+<a class="map-link inline-block font-body-sm text-body-sm text-primary font-medium mt-0.5 underline decoration-gold/60 underline-offset-2" href="https://maps.app.goo.gl/7XsqA5XDNt7hoSBw7" data-i18n="fam.addrGroom">53 - Ấp Phụng Quới A - Xã Thạnh An - TP. Cần Thơ</a>
 </div>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant font-light italic leading-relaxed">
+<p class="font-body-md text-body-md text-on-surface-variant font-light italic leading-relaxed" data-i18n="fam.quoteGroom">
       “Hân hạnh được đón tiếp quý khách thân thương đến hiệp ý tạ ơn và chúc phúc cho hai con của chúng tôi trong ngày vui trăm năm kết duyên tơ hồng.”
     </p>
 </div>
@@ -522,15 +526,15 @@
 </div>
 <div class="relative z-10 max-w-3xl mx-auto py-space-xl text-surface-bright">
 <span class="material-symbols-outlined text-[36px] text-tertiary-fixed mb-space-xs">favorite</span>
-<h2 class=" text-headline-lg sm:text-display-lg-mobile text-tertiary-fixed italic mb-space-sm font-normal">
+<h2 class=" text-headline-lg sm:text-display-lg-mobile text-tertiary-fixed italic mb-space-sm font-normal" data-i18n="end.quote">
         “Nguyện xin Thiên Chúa chúc lành cho tình yêu của chúng con. Chân thành cảm ơn sự hiện diện và lời cầu chúc của quý vị!”
       </h2>
-<p class="font-body-lg text-body-lg text-surface-container-low max-w-xl mx-auto font-light leading-relaxed mb-space-lg">
+<p class="font-body-lg text-body-lg text-surface-container-low max-w-xl mx-auto font-light leading-relaxed mb-space-lg" data-i18n="end.lead">
         Chúng mình vô cùng trân trọng tình cảm và sự hiện diện của quý vị trong khoảnh khắc thiêng liêng nhất đời người.
       </p>
 <div class="inline-flex flex-col items-center">
 <span class=" text-headline-sm text-surface-bright tracking-wider">VŨ ĐỨC THUẬN &amp; TRƯƠNG THỊ KIM THƯ</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-tertiary-fixed mt-1 font-semibold">10 • 10 • 2026 (01 • 09 BÍNH NGỌ)</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-tertiary-fixed mt-1 font-semibold" data-i18n="end.date">10 • 10 • 2026 (01 • 09 BÍNH NGỌ)</span>
 </div>
 </div>
 </section>
@@ -602,4 +606,222 @@
       });
     });
   })();
-</script></main><footer class="w-full bg-surface-container-low mt-space-xl pt-space-xl pb-space-lg border-t border-primary/10"><div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter"><div class="p-space-xl bg-surface rounded-lg shadow-[0_1px_8px_rgba(50,87,63,0.04)] text-center relative overflow-hidden border border-outline-variant/30"><div class="flex justify-center mb-space-md"><img alt="Monogram TT" class="h-14 w-14 object-contain" src="logo.svg"/></div><h3 class=" text-headline-sm text-primary mb-space-xs">Vũ Đức Thuận &amp; Trương Thị Kim Thư</h3><p class="font-body-md text-on-surface-variant max-w-lg mx-auto mb-space-lg font-light">Sự hiện diện và lời chúc phúc của Quý khách là món quà quý giá và trọn vẹn nhất trong ngày trọng đại của chúng mình.</p><div class="flex flex-wrap justify-center items-center gap-x-space-lg gap-y-space-xs font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] mb-space-lg font-semibold"><span>Trân Trọng Đón Tiếp</span></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm border-t border-outline-variant/30"><p>© 2026 Vũ Đức Thuận &amp; Trương Thị Kim Thư.</p><p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold"></p></div></div></div></footer></body></html>
+</script></main><footer class="w-full bg-surface-container-low mt-space-xl pt-space-xl pb-space-lg border-t border-primary/10"><div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter"><div class="p-space-xl bg-surface rounded-lg shadow-[0_1px_8px_rgba(50,87,63,0.04)] text-center relative overflow-hidden border border-outline-variant/30"><div class="flex justify-center mb-space-md"><img alt="Monogram TT" class="h-14 w-14 object-contain" src="logo.svg"/></div><h3 class=" text-headline-sm text-primary mb-space-xs">Vũ Đức Thuận &amp; Trương Thị Kim Thư</h3><p class="font-body-md text-on-surface-variant max-w-lg mx-auto mb-space-lg font-light" data-i18n="foot.lead">Sự hiện diện và lời chúc phúc của Quý khách là món quà quý giá và trọn vẹn nhất trong ngày trọng đại của chúng mình.</p><div class="flex flex-wrap justify-center items-center gap-x-space-lg gap-y-space-xs font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] mb-space-lg font-semibold"><span data-i18n="foot.welcome">Trân Trọng Đón Tiếp</span></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm border-t border-outline-variant/30"><p>© 2026 Vũ Đức Thuận &amp; Trương Thị Kim Thư.</p><p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold"></p></div></div></div></footer><script>
+  (function () {
+    var calendar = {
+      vi: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=L%E1%BB%85+Th%C3%A0nh+H%C3%B4n+Thu%E1%BA%ADn+%26+Th%C6%B0&dates=20261010T020000Z/20261010T150000Z&details=L%E1%BB%85+H%C3%B4n+Ph%E1%BB%91i+v%C3%A0+Ti%E1%BB%87c+C%C6%B0%E1%BB%9Bi+V%C5%A9+%C4%90%E1%BB%A9c+Thu%E1%BA%ADn+%26+Tr%C6%B0%C6%A1ng+Th%E1%BB%8B+Kim+Th%C6%B0",
+      en: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Thuan+%26+Thu&dates=20261010T020000Z/20261010T150000Z&details=Nuptial+Mass+and+wedding+reception+of+Vu+Duc+Thuan+%26+Truong+Thi+Kim+Thu"
+    };
+    var copy = {
+      vi: {
+        "nav.home": "Trang chủ",
+        "nav.story": "Chúng mình",
+        "nav.schedule": "Lịch cưới",
+        "nav.gallery": "Hình ảnh",
+        "nav.family": "Gia đình",
+        "nav.main": "Điều hướng chính",
+        "nav.mobile": "Điều hướng điện thoại",
+        "hero.kicker": "Kính Báo Lễ cưới",
+        "hero.mass": "Thánh Lễ Hôn Phối",
+        "hero.love": "Duyên Tình Trăm Năm",
+        "hero.lunar": "(Nhằm ngày 01 tháng 09 năm Bính Ngọ)",
+        "hero.verse": "“Sự gì Thiên Chúa đã kết hợp, loài người không được phân ly.”",
+        "hero.ref": "Mát-thêu 19, 6",
+        "hero.cta": "Xem chương trình lễ cưới",
+        "hero.scroll": "Cuộn để xem tiếp",
+        "about.kicker": "Cô Dâu & Chú Rể",
+        "about.title": "Hai chúng mình",
+        "about.groom": "Chú Rể",
+        "about.bride": "Cô Dâu",
+        "about.love": "Vẹn Tròn Yêu Thương",
+        "time.kicker": "Chương Trình Ngày Hồng Phúc",
+        "time.title": "Ngày vui của chúng mình",
+        "time.lead": "Trân trọng kính mời quý khách lưu lại các mốc thời gian trang trọng",
+        "time.fri": "Thứ Sáu, 09.10.2026",
+        "time.sat": "Thứ Bảy, 10.10.2026",
+        "time.sun": "Chủ Nhật, 11.10.2026",
+        "time.lunar30": "30.08 Bính Ngọ",
+        "time.lunar01": "01.09 Bính Ngọ",
+        "time.lunar02": "02.09 Bính Ngọ",
+        "time.e1": "Nhóm họ nhà gái",
+        "time.placeBride": "Tư gia nhà gái — Số 11, ấp Phụng Lợi, xã Thạnh An, TP. Cần Thơ",
+        "time.main": "Nghi thức chính",
+        "time.e2": "Thánh lễ hôn phối",
+        "time.church": "Thánh Đường Giáo Xứ Giuse An Bình",
+        "time.e3": "Tiệc cưới nhà gái",
+        "time.e4": "Lễ nhóm họ nhà trai",
+        "time.placeGroom": "Tư gia nhà trai — 53, ấp Phụng Quới A, xã Thạnh An, TP. Cần Thơ",
+        "time.e5": "Tiệc cưới nhà trai",
+        "directions": "Chỉ đường",
+        "count.kicker": "Thời Gian Hồng Phúc",
+        "count.title": "Đếm ngược đến ngày chúng mình về chung một nhà",
+        "count.date": "10 • 10 • 2026 (Nhằm ngày 01/09 Năm Bính Ngọ)",
+        "count.days": "Ngày",
+        "count.hours": "Giờ",
+        "count.mins": "Phút",
+        "count.secs": "Giây",
+        "count.save": "Lưu vào lịch hẹn",
+        "gal.kicker": "Khoảnh Khắc Yêu Thương",
+        "gal.title": "Kỷ niệm ngày chung đôi",
+        "gal.lead": "Ghi dấu những xúc cảm ngọt ngào trên con đường cùng bước",
+        "gal.cap1": "Hạnh phúc là khi bên nhau",
+        "gal.cap1s": "Hình kỷ niệm lễ cưới",
+        "gal.cap2": "Bên nhau thật vui",
+        "gal.cap2s": "Kỷ niệm ngày chung đôi",
+        "fam.kicker": "Gia Đình Hai Bên",
+        "fam.title": "Song Thân Chủ Hôn",
+        "fam.brideSide": "Bên Nhà Gái",
+        "fam.groomSide": "Bên Nhà Trai",
+        "fam.parents": "Song Thân Chủ Hôn",
+        "fam.father": "Thân phụ",
+        "fam.mother": "Thân mẫu",
+        "fam.homeBride": "Tư gia Nhà Gái",
+        "fam.homeGroom": "Tư gia Nhà Trai",
+        "fam.addrBride": "Số 11 - Ấp Phụng Lợi - Xã Thạnh An - TP. Cần Thơ",
+        "fam.addrGroom": "53 - Ấp Phụng Quới A - Xã Thạnh An - TP. Cần Thơ",
+        "fam.quoteBride": "“Kính mong quý quan viên hai họ, thân bằng quyến thuộc cùng đến hiệp thông dâng Thánh lễ và chung vui cùng gia đình chúng tôi trong ngày hồng phúc này.”",
+        "fam.quoteGroom": "“Hân hạnh được đón tiếp quý khách thân thương đến hiệp ý tạ ơn và chúc phúc cho hai con của chúng tôi trong ngày vui trăm năm kết duyên tơ hồng.”",
+        "end.quote": "“Nguyện xin Thiên Chúa chúc lành cho tình yêu của chúng con. Chân thành cảm ơn sự hiện diện và lời cầu chúc của quý vị!”",
+        "end.lead": "Chúng mình vô cùng trân trọng tình cảm và sự hiện diện của quý vị trong khoảnh khắc thiêng liêng nhất đời người.",
+        "end.date": "10 • 10 • 2026 (01 • 09 BÍNH NGỌ)",
+        "foot.lead": "Sự hiện diện và lời chúc phúc của Quý khách là món quà quý giá và trọn vẹn nhất trong ngày trọng đại của chúng mình.",
+        "foot.welcome": "Trân Trọng Đón Tiếp",
+        "menu.open": "Mở danh mục điều hướng",
+        "alt.groom": "Vũ Đức Thuận - Chú Rể",
+        "alt.bride": "Trương Thị Kim Thư - Cô Dâu",
+        "alt.church": "Thuận và Thư trước nhà thờ",
+        "alt.smile": "Thuận và Thư cười bên nhau",
+        "alt.aodai": "Thuận và Thư trong áo dài",
+        "alt.bouquet": "Thuận và Thư cùng bó hoa",
+        "alt.flowers": "Thuận và Thư giữa hoa",
+        "alt.back": "Thuận và Thư quay lưng",
+        "alt.veil": "Thuận nâng khăn voan của Thư",
+        "alt.stand": "Thuận và Thư đứng cạnh nhau",
+        "alt.look": "Thuận nhìn Thư",
+        "alt.hy": "Thuận và Thư bên chữ Hỷ"
+      },
+      en: {
+        "nav.home": "Home",
+        "nav.story": "Our Story",
+        "nav.schedule": "Schedule",
+        "nav.gallery": "Gallery",
+        "nav.family": "Family",
+        "nav.main": "Main navigation",
+        "nav.mobile": "Mobile navigation",
+        "hero.kicker": "Wedding Announcement",
+        "hero.mass": "Holy Matrimony",
+        "hero.love": "A Love for a Lifetime",
+        "hero.lunar": "(Lunar 01.09, Year of the Horse)",
+        "hero.verse": "“What God has joined together, let no one separate.”",
+        "hero.ref": "Matthew 19:6",
+        "hero.cta": "View the wedding schedule",
+        "hero.scroll": "Scroll to continue",
+        "about.kicker": "The Bride & Groom",
+        "about.title": "The Two of Us",
+        "about.groom": "The Groom",
+        "about.bride": "The Bride",
+        "about.love": "A Love Made Whole",
+        "time.kicker": "Our Wedding Day",
+        "time.title": "The Day We Celebrate",
+        "time.lead": "We warmly invite you to share these cherished moments with us",
+        "time.fri": "Friday, 09.10.2026",
+        "time.sat": "Saturday, 10.10.2026",
+        "time.sun": "Sunday, 11.10.2026",
+        "time.lunar30": "Lunar 30.08, Year of the Horse",
+        "time.lunar01": "Lunar 01.09, Year of the Horse",
+        "time.lunar02": "Lunar 02.09, Year of the Horse",
+        "time.e1": "Bride's family gathering",
+        "time.placeBride": "Bride's family home — No. 11, Phung Loi Hamlet, Thanh An Commune, Can Tho",
+        "time.main": "The main ceremony",
+        "time.e2": "Nuptial Mass",
+        "time.church": "St. Joseph An Binh Parish Church",
+        "time.e3": "Bride's wedding reception",
+        "time.e4": "Groom's family gathering",
+        "time.placeGroom": "Groom's family home — 53, Phung Quoi A Hamlet, Thanh An Commune, Can Tho",
+        "time.e5": "Groom's wedding reception",
+        "directions": "Directions",
+        "count.kicker": "Counting the Days",
+        "count.title": "Counting down to the day we become one",
+        "count.date": "10 • 10 • 2026 (Lunar 01/09, Year of the Horse)",
+        "count.days": "Days",
+        "count.hours": "Hours",
+        "count.mins": "Minutes",
+        "count.secs": "Seconds",
+        "count.save": "Add to calendar",
+        "gal.kicker": "Moments of Love",
+        "gal.title": "Memories of Our Journey",
+        "gal.lead": "Sweet moments along the path we walk together",
+        "gal.cap1": "Happiness is being together",
+        "gal.cap1s": "Wedding memories",
+        "gal.cap2": "Joy in being together",
+        "gal.cap2s": "Our shared journey",
+        "fam.kicker": "Our Two Families",
+        "fam.title": "Our Parents",
+        "fam.brideSide": "The Bride's Family",
+        "fam.groomSide": "The Groom's Family",
+        "fam.parents": "Parents of the Couple",
+        "fam.father": "Father",
+        "fam.mother": "Mother",
+        "fam.homeBride": "Bride's Family Home",
+        "fam.homeGroom": "Groom's Family Home",
+        "fam.addrBride": "No. 11, Phung Loi Hamlet, Thanh An Commune, Can Tho",
+        "fam.addrGroom": "53, Phung Quoi A Hamlet, Thanh An Commune, Can Tho",
+        "fam.quoteBride": "“We warmly invite both families and loved ones to join us for the Nuptial Mass and to celebrate this blessed day with our family.”",
+        "fam.quoteGroom": "“It is our joy to welcome you as we give thanks and ask God's blessing on our two children, joined in a lifetime of love.”",
+        "end.quote": "“May God bless our love. Thank you for your presence and your kind wishes.”",
+        "end.lead": "We treasure your affection and your presence at the most sacred moment of our lives.",
+        "end.date": "10 • 10 • 2026 (LUNAR 01 • 09, YEAR OF THE HORSE)",
+        "foot.lead": "Your presence and your blessing are the most precious gift on our wedding day.",
+        "foot.welcome": "With a Warm Welcome",
+        "menu.open": "Open navigation menu",
+        "alt.groom": "Vu Duc Thuan, the groom",
+        "alt.bride": "Truong Thi Kim Thu, the bride",
+        "alt.church": "Thuan and Thu in front of the church",
+        "alt.smile": "Thuan and Thu smiling together",
+        "alt.aodai": "Thuan and Thu in traditional ao dai",
+        "alt.bouquet": "Thuan and Thu with the bouquet",
+        "alt.flowers": "Thuan and Thu among the flowers",
+        "alt.back": "Thuan and Thu standing back to back",
+        "alt.veil": "Thuan lifting Thu's veil",
+        "alt.stand": "Thuan and Thu standing together",
+        "alt.look": "Thuan looking at Thu",
+        "alt.hy": "Thuan and Thu with the double-happiness symbol"
+      }
+    };
+
+    function apply(lang) {
+      if (!copy[lang]) lang = "vi";
+      document.documentElement.lang = lang === "en" ? "en" : "vi";
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        var value = copy[lang][el.getAttribute("data-i18n")];
+        if (value != null) el.textContent = value;
+      });
+      document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+        var value = copy[lang][el.getAttribute("data-i18n-alt")];
+        if (value != null) el.alt = value;
+      });
+      document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+        var value = copy[lang][el.getAttribute("data-i18n-aria")];
+        if (value != null) el.setAttribute("aria-label", value);
+      });
+      document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+        var on = btn.getAttribute("data-set-lang") === lang;
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      var cal = document.getElementById("add-calendar");
+      if (cal && calendar[lang]) cal.href = calendar[lang];
+      try { localStorage.setItem("wedding-lang", lang); } catch (err) {}
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        apply(btn.getAttribute("data-set-lang"));
+      });
+    });
+
+    var saved = "vi";
+    try { saved = localStorage.getItem("wedding-lang") || "vi"; } catch (err) {}
+    apply(saved);
+  })();
+</script>
+</body></html>
